@@ -1,0 +1,25 @@
+{
+  "sqltools.connections": [
+    {
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5075,
+      "askForPassword": true,
+      "driver": "PostgreSQL",
+      "name": "vando",
+      "database": "vando",
+      "username": "vando"
+    },
+    {
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5050,
+      "driver": "PostgreSQL",
+      "name": "vando",
+      "database": "mydb",
+      "username": "vando"
+    }
+  ]
+}
