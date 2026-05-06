@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS borrowing (
     book_id INT REFERENCES book(id)
 );
 -- Setup Borrowers
-INSERT INTO borrowing (name, address, phone) -- ✅ was: INSERT INTO member
+INSERT INTO borrowing (name, address, phone)
 VALUES (
         'Rivando Al Rasyid',
         'Jakarta, Indonesia',
@@ -62,7 +62,7 @@ INSERT INTO librarian (name, address, phone)
 VALUES ('Alice Smith', '123 Library Ln', '555-0101'),
     ('Bob Jones', '456 Archive St', '555-0102');
 -- Setup Books
-INSERT INTO book (name, isbn, category_id, bookshelf_id) -- ✅ removed trailing comma, added missing columns
+INSERT INTO book (name, isbn, category_id, bookshelf_id)
 VALUES ('Clean Code', 9780132350884, 1, 1),
     ('The Pragmatic Programmer', 9780135957059, 1, 1),
     ('Neuromancer', 9780441569595, 2, 2),
