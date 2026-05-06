@@ -1,0 +1,16 @@
+-- SELECT d.first_name AS director_name,
+--     COUNT(g.id) AS genre_count
+-- FROM movies m
+--     INNER JOIN directors d ON m.director_id = d.id
+--     INNER JOIN genres g ON m.genre_id = g.id
+-- GROUP BY d.id,
+--     d.first_name
+-- ORDER BY d.first_name ASC;
+-- SELECT d.first_name AS director_name,
+--     COUNT(g.id) AS genre_count
+-- FROM movies m
+--     INNER JOIN directors d ON m.director_id = d.id
+--     INNER JOIN genres g ON m.genre_id = g.id
+-- GROUP BY d.id,
+--     d.first_name
+-- ORDER BY d.first_name ASC;
