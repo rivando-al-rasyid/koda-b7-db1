@@ -32,5 +32,20 @@ FROM movies m
 GROUP BY YEAR(m.release_date)
 ORDER BY jumlah_film DESC
 LIMIT 1;
-actor
-and movie
+--- movie and their actor
+SELECT m.title,
+    m.release_date,
+    m.rating,
+    STRING_AGG(
+        a.first_name || ' ' || a.last_name,
+        ', '
+        ORDER BY a.first_name ASC
+    ) AS actors_list
+FROM movies m
+    INNER JOIN movies_actors ma ON m.id = ma.movie_id
+    INNER JOIN actors a ON ma.actor_id = a.id
+GROUP BY m.id,
+    m.title,
+    m.release_date,
+    m.rating
+ORDER BY m.title ASC;
